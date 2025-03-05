@@ -18,7 +18,7 @@ def cl_dis():
     
 @socket.on("message")
 def message(data):
-    emit("message",{"message":data["message"],"name":data["name"]})
+    emit("message",data)
 
 if __name__ == "__main__":
     socket.run(app)
