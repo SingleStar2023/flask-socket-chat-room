@@ -1,6 +1,8 @@
 from flask import Flask , render_template
 from flask_socketio import SocketIO , emit
+import eventlet
 
+eventlet.monkey_patch()
 app = Flask("application",template_folder="",static_folder="")
 socket = SocketIO(app,async_mode="eventlet")
 
